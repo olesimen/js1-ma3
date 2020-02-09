@@ -62,3 +62,13 @@ const container = document.querySelector(".container");
 const button = document.querySelector(".btn");
 
 container.removeChild(button);
+
+// Question 6
+const animals = document.querySelector(".animals");
+const cows = document.querySelector(".cows");
+
+const listing = document.createElement("li");
+listing.className = "parrots";
+listing.innerText = "Parrots";
+
+cows.after(listing);
