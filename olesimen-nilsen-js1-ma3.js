@@ -9,6 +9,8 @@ const gamesUrl = `${baseUrl}games?genres=`;
 let genres = "sports";
 const genreUrl = gamesUrl + genres;
 
+// Or without the variables, perhaps?
+
 fetch(genreUrl)
     .then(function(response) {
         return response.json();
@@ -31,16 +33,9 @@ function gamesLogger(json) {
 
 // Question 3
 let animalText = "These cats are outrageous.";
-animmalText = animalText.replace("cats", "giraffes");
+animalText = animalText.replace("cats", "giraffes");
 
 // Question 4
-/* Given the URL below, write code that checks if there is a userId parameter in the query string.
-
-If there is no userID parameter, redirect the browser to third.html.
-
-If there is a userID parameter and its value is less than 10, redirect to first.html.
-
-If there is a userID parameter and its value is 10 or greater, redirect to second.html. */
 
 // https://my.site.com?userId=7
 
@@ -60,3 +55,10 @@ if (params.has("userId")) {
 } else {
     document.location.href = "third.html";
 }
+
+// Question 5
+
+const container = document.querySelector(".container");
+const button = document.querySelector(".btn");
+
+container.removeChild(button);
