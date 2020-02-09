@@ -65,7 +65,7 @@ container.removeChild(button);
 
 // Question 6
 const addAnimal = document.createElement("li");
-addAnimal.innerText = "parrots";
+addAnimal.innerText = "Parrots";
 addAnimal.className = "parrots";
 
 document.querySelector(".cows").after(addAnimal);
