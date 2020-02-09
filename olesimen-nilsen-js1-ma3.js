@@ -64,11 +64,17 @@ const button = document.querySelector(".btn");
 container.removeChild(button);
 
 // Question 6
-const animals = document.querySelector(".animals");
-const cows = document.querySelector(".cows");
 
-const listing = document.createElement("li");
-listing.className = "parrots";
-listing.innerText = "Parrots";
+// Question 7
+const gameItem = "https://api.rawg.io/api/games/3801";
 
-cows.after(listing);
+fetch(gameItem)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(json) {
+        document.querySelector(".rating").innerText = json.rating;
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
