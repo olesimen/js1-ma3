@@ -64,6 +64,11 @@ const button = document.querySelector(".btn");
 container.removeChild(button);
 
 // Question 6
+const addAnimal = document.createElement("li");
+addAnimal.innerText = "parrots";
+addAnimal.className = "parrots";
+
+document.querySelector(".cows").after(addAnimal);
 
 // Question 7
 const gameItem = "https://api.rawg.io/api/games/3801";
