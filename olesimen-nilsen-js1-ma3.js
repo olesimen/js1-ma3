@@ -1,14 +1,7 @@
 // Question 1
-/* function(a, b) {
-    return a - b;
-} */
-
 const subtract = (a, b) => a - b;
 
 // Question 2
-/* Make a call to the URL below, pass the JSON it returns to a function and inside that function loop through the results and log each game's name.
-
-In the catch method of your code, redirect to error.html if there is an error. */
 
 const baseUrl = "https://api.rawg.io/api/";
 const gamesUrl = `${baseUrl}games?genres=`;
@@ -21,11 +14,11 @@ fetch(genreUrl)
         return response.json();
     })
     .then(function(json) {
-        console.dir(json);
+        // console.dir(json);
         gamesLogger(json);
     })
     .catch(function(error) {
-        console.dir(error);
+        window.location.href = "error.html";
     });
 
 function gamesLogger(json) {
@@ -35,3 +28,7 @@ function gamesLogger(json) {
         console.log(games[i].name);
     }
 }
+
+// Question 3
+let animalText = "These cats are outrageous.";
+animmalText = animalText.replace("cats", "giraffes");
